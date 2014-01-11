@@ -1,0 +1,11 @@
+now_node = listGet(htable->cond);			
+			if(fp == fp_head) {
+				struct frequent_patterns *new_fp = malloc(sizeof(struct frequent_patterns));
+				new_fp->ptr  = malloc(sizeof(short) * MIN_SUPPORT_INDEX);
+				new_fp->htable_value = htable->no;
+				fp->next 	 = new_fp;
+				fp 			 = new_fp;
+			}
+			else if(fp->next != NULL) {
+				fp = fp->next;				
+			}
